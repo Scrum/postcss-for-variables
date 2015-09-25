@@ -4,29 +4,38 @@ var expect  = require('chai').expect;
 var plugin = require('../');
 
 var test = function (input, output, opts) {
-    expect(postcss([plugin(opts)]).process(input).css).to.eql(output);
+    expect(postcss([plugin(opts) ]).process(input).css).to.eql(output);
 };
 
 describe('postcss-for-variables', function () {
 
-    it('it change one properties', function(){
+    it('it change first properties', function(){
+        test(
+            ':root{ --from: 1; } @for $i from var(--from) to 2',
+            ':root{ --from: 1; } @for $i from 1 to 2'
+        );
+    });
+
+    it('it change second properties', function(){
         test(
             ':root{ --to: 2; } @for $i from 1 to var(--to)',
             ':root{ --to: 2; } @for $i from 1 to 2'
-        )
-    })
+        );
+    });
 
     it('it change two properties', function(){
         test(
             ':root{ --from: 1; --to: 2; } @for $i from var(--from) to var(--to)',
             ':root{ --from: 1; --to: 2; } @for $i from 1 to 2'
-        )
-    })
+        );
+    });
 
-    /*it('it iterates from and to', function () {
-        test(':root{ --from: 1; --to: 2 } @for $i from var(--from) to var(--to) { .b-$i { width: $(i)px; } }',
-             ':root{ --from: 1; --to: 2 }\n.b-1 {\n    width: 1px\n}\n.b-2 {\n    width: 2px\n}');
-    });*/
+    it('it change tree properties', function(){
+        test(
+            ':root{ --from: 1; --to: 2; --step: 5 } @for $i from var(--from) to var(--to) by var(--step)',
+            ':root{ --from: 1; --to: 2; --step: 5 } @for $i from 1 to 2 by 5'
+        );
+    });
 
     /*it('it iterates from bigger to smaller', function () {
         test('@for $i from 3 to 1 { .b-$i { width: $(i)px; } }',

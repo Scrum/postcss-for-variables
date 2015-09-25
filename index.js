@@ -4,23 +4,23 @@ var balanced = require('balanced-match');
 var VAR_FUNC_IDENTIFIER = 'var';
 
 function resolveValue(value, map) {
-    var start = value.indexOf(VAR_FUNC_IDENTIFIER + "(")
+
+    var start = value.indexOf(VAR_FUNC_IDENTIFIER + '(');
+
     if (start === -1) {
-      return [value]
+        return [value];
     }
 
-  var nv = '';
+    value.match(/var\(\S*\)/g).map(function(match){
 
-  value.match(/var\(\S*\)/g).map(function(v){
+        var matches = balanced('(', ')', match);
+        var reg = new RegExp(VAR_FUNC_IDENTIFIER + '.\(' + matches.body + '.\)', 'g');
+        var property = map[matches.body];
 
-    var matches = balanced("(", ")", v)
-    var reg = new RegExp(VAR_FUNC_IDENTIFIER+'.\('+matches.body+'.\)', 'g')
-    var newValue = map[matches.body];
+        value = value.replace(reg, property);
+    });
 
-    nv = value.replace(reg, newValue)
-  })
-
-    return nv
+    return value;
 
 }
 
