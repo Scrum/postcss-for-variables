@@ -1,7 +1,7 @@
 # PostCSS For Plugin
 [![Build Status](https://travis-ci.org/gitscrum/postcss-for-variables.svg)](https://travis-ci.org/gitscrum/postcss-for-variables)
 
-Used in conjunction with the plugin [postcss-for]: https://github.com/antyakushev/postcss-for
+Used in conjunction with the plugin [postcss-for](https://github.com/antyakushev/postcss-for)
 
 
 
@@ -35,4 +35,4 @@ Used in conjunction with the plugin [postcss-for]: https://github.com/antyakushe
 postcss([ require('postcss-for-var'), require('postcss-for') ])
 ```
 
-See [PostCSS] docs for examples for your environment.
+See [PostCSS](https://github.com/postcss/postcss) docs for examples for your environment.
