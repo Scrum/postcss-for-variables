@@ -1,5 +1,5 @@
 # PostCSS For Plugin
-[![Build Status](https://travis-ci.org/gitscrum/postcss-for-variables.svg)](https://travis-ci.org/gitscrum/postcss-for-variables)
+[![Build Status](https://travis-ci.org/gitscrum/postcss-for-variables.svg?style=flat-square)](https://travis-ci.org/gitscrum/postcss-for-variables)
 
 Used in conjunction with the plugin [postcss-for](https://github.com/antyakushev/postcss-for)
 
