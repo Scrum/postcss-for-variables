@@ -32,7 +32,7 @@ Used in conjunction with the plugin [postcss-for](https://github.com/antyakushev
 ```
 
 ## Usage
-Use postcss-for-variables before postcss-for/
+Use postcss-for-variables before postcss-for
 
 ```js
 postcss([ require('postcss-for-variables'), require('postcss-for') ])
