@@ -1,7 +1,5 @@
 # PostCSS For Plugin
-[![Build Status](https://img.shields.io/travis/GitScrum/postcss-for-variables.svg?style=flat-square)](https://travis-ci.org/GitScrum/postcss-for-variables)
-[![npm version](https://img.shields.io/npm/v/postcss-for-variables.svg?style=flat-square)](https://www.npmjs.com/package/postcss-for-variables) 
-[![npm downloads](https://img.shields.io/npm/dm/postcss-for-variables.svg?style=flat-square)](https://www.npmjs.com/package/postcss-for-variables)
+[![Build Status](https://img.shields.io/travis/GitScrum/postcss-for-variables.svg?style=flat-square)](https://travis-ci.org/GitScrum/postcss-for-variables)[![npm version](https://img.shields.io/npm/v/postcss-for-variables.svg?style=flat-square)](https://www.npmjs.com/package/postcss-for-variables)[![npm downloads](https://img.shields.io/npm/dm/postcss-for-variables.svg?style=flat-square)](https://www.npmjs.com/package/postcss-for-variables)[![Coveralls](https://img.shields.io/coveralls/GitScrum/postcss-for-variables/master.svg?style=flat-square)]()
 
 Used in conjunction with the plugin [postcss-for](https://github.com/antyakushev/postcss-for)
 
