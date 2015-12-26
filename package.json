@@ -1,6 +1,6 @@
 {
   "name": "postcss-for-variables",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "PostCss plugin to use CSS Custom Properties in at-rule @for",
   "main": "index.js",
   "scripts": {
